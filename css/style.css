@@ -1,0 +1,153 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: dodgerblue;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header/Nav */
+.header {
+  padding: 24px 0;
+  background: #FAFAFA;
+  width: 100%;
+}
+
+.header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(90%, 1444px);
+  margin-inline: auto;
+}
+
+.header .content .logo {
+  /* background: dodgerblue; */
+}
+.header .content .logo a {
+  font-size: 2em;
+  color: #1e90ff;
+}
+
+.header .content .nav {
+  width: 100%;
+  /* border: 2px solid red; */
+}
+
+.header .content .list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4em;
+}
+
+.header .content .list a {
+  font-size: 1.2em;
+  color: #000000;
+}
+
+/* Hero */
+.hero {
+  padding: 4em 0 4em 0;
+  background: #FAFAFA;
+}
+
+.hero .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+.hero .content .left {
+  width: 50%;
+}
+
+.hero .content h1 {
+  text-transform: uppercase;
+  font-size: 3.8em;
+}
+.hero .content p {
+  width: 85%;
+  font-size: 1.3em;
+  margin-bottom: 2em;
+}
+.hero .content a {
+  color: #FFFFFF;
+  font-size: 1.125em;
+  background: dodgerblue;
+  padding: 16px 48px;
+}
+
+.hero .content .btn-2 {
+  color: dodgerblue;
+  font-size: 1.5em;
+  border: 2px solid dodgerblue;
+  background: #FAFAFA;
+  padding: 14px 44px;
+  margin-left: 1em;
+}
+
+.hero .content .right {
+  position: relative;
+  width: 50%;
+  z-index: 9999;
+  border-radius: 10px;
+  border: 3px solid dodgerblue;
+
+}
+.hero .content .right::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 3px solid orange;
+  transform: rotate(-10deg);
+  z-index: 2;
+}
+.hero .content .right::after {
+  position: absolute;
+  top: 0;
+  left: 32px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 4px solid orangered;
+  transform: rotate(15deg);
+  z-index: 0;
+
+}
+.hero .content img {
+  display: block;
+  width: 100%;
+  border-radius: 100px;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    padding: 0;
+    width: min(90%, 1200px);
+    background: dodgerblue;
+  }
+}
+
